@@ -1,0 +1,19 @@
+<div class="content">
+  <h2>Choose unit to convert to and unit to convert from</h2>
+  <select class="unit-from" (change)="fromChangeHandler($event)" ng-model="selectedFrom">
+
+    <option *ngFor="let unit of units" [value] = "unit">{{unit}}</option>
+
+  </select>
+
+  <button type="button">reverse</button>
+
+  <select class="unit-to" (change)="toChangeHandler($event)" >
+
+    <option *ngFor="let unit of units" [value] = "unit">{{unit}}</option>
+
+  </select>
+
+
+  <p>Converting from {{selectedFrom}} to {{selectedTo}}</p>
+</div>

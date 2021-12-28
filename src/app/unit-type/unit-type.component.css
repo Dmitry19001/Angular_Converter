@@ -1,0 +1,21 @@
+.content{
+  margin: 15px;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+p, select {
+  font-size: 1rem;
+}
+
+p, h2 {
+  color: #fff;
+}
+
+
+@media screen and (max-width: 767px) {
+  .content {
+    margin: 250px, 5px, 5px, 5px;
+  }
+
+}

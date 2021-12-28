@@ -12,7 +12,7 @@ export class ToolbarComponent implements OnInit {
   @Input() appName: string;
 
   constructor(){
-    this.welcomeText = "Welcome to the world of Angular in ";
+    this.welcomeText = "Welcome to ";
     this.appName = "";
   }
 
