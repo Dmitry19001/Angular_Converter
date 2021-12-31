@@ -6,6 +6,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { UnitTypeComponent } from './unit-type/unit-type.component';
 import { UnitComponent } from './unit/unit.component';
 import { OutputComponent } from './output/output.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { OutputComponent } from './output/output.component';
     OutputComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

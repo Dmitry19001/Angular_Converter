@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UnitTypeComponent } from '../unit-type/unit-type.component'
 
 @Component({
   selector: 'app-unit',
@@ -6,29 +7,47 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./unit.component.css']
 })
 export class UnitComponent implements OnInit {
-  units: string[] = [
-    //Length
-    "Km","m","cm","mm","nm",
-    "Mile", "Feet", "Inch",
+  // units: string[] = [
+  //   //Length
+  //   "Km","m","cm","mm","nm",
+  //   "Mile", "Feet", "Inch",
 
-    //Temperature
-    "Celsius", "Fahrenheit", "Kelvin",
+  //   //Temperature
+  //   "Celsius", "Fahrenheit", "Kelvin",
 
-    //Weight
-    "T", "Kg", "g", "mg",
-    "Ton (Imperial)", "Stone", "Pound", "Ounce",
+  //   //Weight
+  //   "T", "Kg", "g", "mg",
+  //   "Ton (Imperial)", "Stone", "Pound", "Ounce",
 
-    //Volume
-    "l", "dl", "ml",
-    "Gallon", "Quart", "Pint", "Fluid ounce"
-  ];
+  //   //Volume
+  //   "l", "dl", "ml",
+  //   "Gallon", "Quart", "Pint", "Fluid ounce"
+  // ];
+  get curCat() {
+    return UnitTypeComponent.ChosenCategory;
+  }
 
-  selectedFrom: string = this.units[1];
-  selectedTo: string = this.units[5];
+  get selectedFrom(){
+    return UnitComponent.SelectedFrom;
+  }
+  set selectedFrom(input: string){
+    UnitComponent.SelectedFrom = input;
+  }
+
+  get selectedTo(){
+    return UnitComponent.SelectedTo;
+  }
+  set selectedTo(input: string){
+    UnitComponent.SelectedTo = input;
+  }
+
+  static SelectedFrom = UnitTypeComponent.ChosenCategory.units[1];
+  static SelectedTo = UnitTypeComponent.ChosenCategory.units[5];
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   fromChangeHandler (event: any) {
@@ -45,5 +64,6 @@ export class UnitComponent implements OnInit {
     this.selectedFrom = this.selectedTo;
 
     this.selectedTo = temp;
+    console.log("reversed");
   }
 }

@@ -1,7 +1,6 @@
 <div class="content">
-  <h2>output works!</h2>
+  <h2>Converter</h2>
   <label for="value">Input unit:</label>
-  <input type="text" id="value" name="value">
-  <p> = </p>
+  <input type="value" id="value" name="value" (change)="inputOnChange($event)" (keyup) = "inputOnChange($event)">
   <p>{{output}}</p>
 </div>

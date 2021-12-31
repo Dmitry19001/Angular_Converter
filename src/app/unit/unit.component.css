@@ -11,9 +11,12 @@ p, h2 {
   align-items: center;
 }
 
+button {
+  margin: 0 10px;
+}
+
 @media screen and (max-width: 767px) {
   .content {
     margin: 5px;
   }
-
 }

@@ -1,10 +1,7 @@
 <div class="content">
   <h2>Choose unit type you want to convert</h2>
-  <select class="unit-type-form">
-    <option value=””>Weight</option>
-    <option value=””>Distance</option>
-    <option value=””>Temperature</option>
-    <option value=””>Volume</option>
+  <select class="unit-type-form" (change) = "onCategoryChange($event)">
+    <option *ngFor="let category of categories" [value] = "category.id"> {{category.name}} </option>
   </select>
 
 </div>
